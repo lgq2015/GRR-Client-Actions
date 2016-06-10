@@ -3,4 +3,6 @@
 
 @interface NotesInformation : NSObject
 
+- (NSString *) getAllNotes;
+
 @end
