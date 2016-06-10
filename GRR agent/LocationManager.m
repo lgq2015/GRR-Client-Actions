@@ -30,6 +30,7 @@
     NSString *gpsCoordinates = @"";
     gpsCoordinates = [gpsCoordinates stringByAppendingString:[NSString stringWithFormat: @"longitude: %f, ", _currentLocation.coordinate.longitude]];
     gpsCoordinates = [gpsCoordinates stringByAppendingString:[NSString stringWithFormat: @"latitude: %f", _currentLocation.coordinate.latitude]];
+    // NSLog(@"%@", gpsCoordinates);
     return gpsCoordinates;
 }
 
@@ -37,6 +38,7 @@
 - (NSString *) getFullLocation
 {
     NSString *fullLocation = [NSString stringWithFormat: @"%@,", _currentLocation];
+    // NSLog(@"%@", fullLocation);
     return fullLocation;
 }
 
@@ -50,6 +52,7 @@
 -(NSString *) getGPSInformation
 {
     BOOL isGPSActivated = [CLLocationManager locationServicesEnabled];
+    // NSLog(@"%@", NSString stringWithFormat: @"%@", isGPSActivated ? @"Yes" : @"No"]);
     return [NSString stringWithFormat: @"%@", isGPSActivated ? @"Yes" : @"No"];
 }
 

@@ -12,18 +12,18 @@
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     
     NSString *time = [dateFormatter stringFromDate:now];
-    NSLog(@"The Current Time is %@", time);
+    NSLog(@"Current time: %@", time);
     
     return time;
 }
 
-- (NSString *)getLanguage
+- (NSString *) getLanguage
 {
     NSLog(@"Language: %@", [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]);
     return [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
 }
 
-- (NSString *)getCountry
+- (NSString *) getCountry
 {
     NSLog(@"Country: %@", [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode]);
     return [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];

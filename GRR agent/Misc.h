@@ -4,7 +4,7 @@
 @interface Misc : NSObject
 
 - (NSString *) getCurrentTime;
-- (NSString *)getLanguage;
-- (NSString *)getCountry;
+- (NSString *) getLanguage;
+- (NSString *) getCountry;
 
 @end

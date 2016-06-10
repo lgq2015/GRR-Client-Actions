@@ -10,6 +10,8 @@
 #import "MessagesInformation.h"
 #import "CalendarInformation.h"
 #import "Multimedia.h"
+#import "PhoneBookInformation.h"
+#import "NotesInformation.h"
 
 @interface ViewController : UIViewController
 

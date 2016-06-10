@@ -10,6 +10,24 @@
 
 @implementation ContactInformation
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        CNContactStore *store = [[CNContactStore alloc] init];
+        [store requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (!granted)
+            {
+                NSLog(@"no access to contacts");
+            }
+            else
+            {
+                NSLog(@"access to contacts granted");
+            }
+        }];
+    }
+    return self;
+}
 
 - (void) scanContactsTable
 {
@@ -79,6 +97,7 @@
 - (NSString *) getContactNames
 {
     [self scanContactsTable];
+    // NSLog(@"%@", _contactNames);
     return _contactNames;
 }
 
@@ -86,6 +105,7 @@
 - (NSString *) getContactNamesAndPhonenumber
 {
     [self scanContactsTable];
+    // NSLog(@"%@", _contactNamesAndPhonenumber);
     return _contactNamesAndPhonenumber;
 }
 

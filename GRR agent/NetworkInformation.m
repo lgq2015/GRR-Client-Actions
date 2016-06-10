@@ -22,7 +22,6 @@
     return self;
 }
 
-
 #define IOS_CELLULAR    @"pdp_ip0"
 #define IOS_WIFI        @"en0"
 #define IOS_VPN         @"utun0"
@@ -127,11 +126,18 @@
     return urlContentIPof;
 }
 
+// hardcoded, settings/general/about
+- (NSString *) getMacAddressBluetooth
+{
+    // NSLog(@"hardcoded");
+    return @"AC:29:**:**:**:9B";
+}
 
-// hardcoded
+// hardcoded, settings/general/about
 - (NSString *) getMacAddress
 {
-    return @"AC:29:3A:2E:52:9B";
+    // NSLog(@"hardcoded");
+    return @"AC:29:**:**:**:9A";
 }
 
 #define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)

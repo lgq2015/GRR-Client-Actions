@@ -3,6 +3,6 @@
 
 @interface MessagesInformation : NSObject
 
--(void) testPrivFrame;
+- (NSString *) getMessages;
 
 @end

@@ -1,12 +1,15 @@
 
 #import "MessagesInformation.h"
 
-
 @implementation MessagesInformation
 
--(void) testPrivFrame
+-(NSString *) getMessages
 {
-    // priv headers not working, try mobilegestalt
+    // try mobilegestalt: https://github.com/Cykey/ios-reversed-headers
+    // priv framework: https://github.com/nst/iOS-Runtime-Headers/tree/master/PrivateFrameworks/ChatKit.framework
+    // CKDBMessage.h
+    NSLog(@"not implemented");
+    return @"not implemented";
 }
 
 

@@ -13,6 +13,10 @@
 		500920581D0765A8008D1603 /* ExampleForPrivateAPIIMEI.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920571D0765A8008D1603 /* ExampleForPrivateAPIIMEI.m */; };
 		500920AF1D082B91008D1603 /* CalendarInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920AE1D082B91008D1603 /* CalendarInformation.m */; };
 		500920BC1D088150008D1603 /* Multimedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920BB1D088150008D1603 /* Multimedia.m */; };
+		500920BF1D0AEC77008D1603 /* PhoneBookInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920BE1D0AEC77008D1603 /* PhoneBookInformation.m */; };
+		500920C51D0B0E3E008D1603 /* NotesInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920C41D0B0E3E008D1603 /* NotesInformation.m */; };
+		500920C81D0B1070008D1603 /* BrowserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920C71D0B1070008D1603 /* BrowserInformation.m */; };
+		500920CB1D0B1092008D1603 /* MessengerAppsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920CA1D0B1092008D1603 /* MessengerAppsInformation.m */; };
 		5030D8581CC3B9A90071DE5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D8571CC3B9A90071DE5E /* main.m */; };
 		5030D85B1CC3B9A90071DE5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D85A1CC3B9A90071DE5E /* AppDelegate.m */; };
 		5030D85E1CC3B9A90071DE5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D85D1CC3B9A90071DE5E /* ViewController.m */; };
@@ -21,7 +25,6 @@
 		5030D8661CC3B9A90071DE5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5030D8641CC3B9A90071DE5E /* LaunchScreen.storyboard */; };
 		5030D8711CC3B9A90071DE5E /* GRR_agentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D8701CC3B9A90071DE5E /* GRR_agentTests.m */; };
 		5030D87C1CC3B9A90071DE5E /* GRR_agentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D87B1CC3B9A90071DE5E /* GRR_agentUITests.m */; };
-		5030D88D1CC3BB320071DE5E /* ClientActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D88C1CC3BB320071DE5E /* ClientActions.m */; };
 		5030D89A1CC539660071DE5E /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D8991CC539660071DE5E /* LocationManager.m */; };
 		5030D8A01CC583C20071DE5E /* DeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D89F1CC583C20071DE5E /* DeviceInformation.m */; };
 		5030D8E81CC6ABC30071DE5E /* ContactInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D8E71CC6ABC30071DE5E /* ContactInformation.m */; };
@@ -66,6 +69,14 @@
 		500920AE1D082B91008D1603 /* CalendarInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarInformation.m; sourceTree = "<group>"; };
 		500920BA1D088150008D1603 /* Multimedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multimedia.h; sourceTree = "<group>"; };
 		500920BB1D088150008D1603 /* Multimedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Multimedia.m; sourceTree = "<group>"; };
+		500920BD1D0AEC77008D1603 /* PhoneBookInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBookInformation.h; sourceTree = "<group>"; };
+		500920BE1D0AEC77008D1603 /* PhoneBookInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBookInformation.m; sourceTree = "<group>"; };
+		500920C31D0B0E3E008D1603 /* NotesInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesInformation.h; sourceTree = "<group>"; };
+		500920C41D0B0E3E008D1603 /* NotesInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesInformation.m; sourceTree = "<group>"; };
+		500920C61D0B1070008D1603 /* BrowserInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserInformation.h; sourceTree = "<group>"; };
+		500920C71D0B1070008D1603 /* BrowserInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserInformation.m; sourceTree = "<group>"; };
+		500920C91D0B1092008D1603 /* MessengerAppsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerAppsInformation.h; sourceTree = "<group>"; };
+		500920CA1D0B1092008D1603 /* MessengerAppsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerAppsInformation.m; sourceTree = "<group>"; };
 		5030D8531CC3B9A90071DE5E /* GRR agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRR agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5030D8571CC3B9A90071DE5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5030D8591CC3B9A90071DE5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,8 +93,6 @@
 		5030D8771CC3B9A90071DE5E /* GRR agentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GRR agentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5030D87B1CC3B9A90071DE5E /* GRR_agentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRR_agentUITests.m; sourceTree = "<group>"; };
 		5030D87D1CC3B9A90071DE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5030D88B1CC3BB320071DE5E /* ClientActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientActions.h; sourceTree = "<group>"; };
-		5030D88C1CC3BB320071DE5E /* ClientActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientActions.m; sourceTree = "<group>"; };
 		5030D8981CC539660071DE5E /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		5030D8991CC539660071DE5E /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		5030D89E1CC583C20071DE5E /* DeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInformation.h; sourceTree = "<group>"; };
@@ -222,8 +231,8 @@
 			children = (
 				50F75F1E1CCA4D0B00584219 /* AppInformation.h */,
 				50F75F1F1CCA4D0B00584219 /* AppInformation.m */,
-				5030D88B1CC3BB320071DE5E /* ClientActions.h */,
-				5030D88C1CC3BB320071DE5E /* ClientActions.m */,
+				500920C61D0B1070008D1603 /* BrowserInformation.h */,
+				500920C71D0B1070008D1603 /* BrowserInformation.m */,
 				500920AD1D082B91008D1603 /* CalendarInformation.h */,
 				500920AE1D082B91008D1603 /* CalendarInformation.m */,
 				5030D8E61CC6ABC30071DE5E /* ContactInformation.h */,
@@ -234,12 +243,18 @@
 				5030D8991CC539660071DE5E /* LocationManager.m */,
 				500920511D073134008D1603 /* MessagesInformation.h */,
 				500920521D073134008D1603 /* MessagesInformation.m */,
+				500920C91D0B1092008D1603 /* MessengerAppsInformation.h */,
+				500920CA1D0B1092008D1603 /* MessengerAppsInformation.m */,
 				50A833B51CF4AA3400D6D129 /* Misc.h */,
 				50A833B61CF4AA3400D6D129 /* Misc.m */,
 				500920BA1D088150008D1603 /* Multimedia.h */,
 				500920BB1D088150008D1603 /* Multimedia.m */,
+				500920C31D0B0E3E008D1603 /* NotesInformation.h */,
+				500920C41D0B0E3E008D1603 /* NotesInformation.m */,
 				50DD37321CC7C7AA00F8E41E /* NetworkInformation.h */,
 				50DD37331CC7C7AA00F8E41E /* NetworkInformation.m */,
+				500920BD1D0AEC77008D1603 /* PhoneBookInformation.h */,
+				500920BE1D0AEC77008D1603 /* PhoneBookInformation.m */,
 			);
 			name = "client actions";
 			sourceTree = "<group>";
@@ -390,19 +405,22 @@
 				5030D85E1CC3B9A90071DE5E /* ViewController.m in Sources */,
 				500920581D0765A8008D1603 /* ExampleForPrivateAPIIMEI.m in Sources */,
 				5009204B1D07128D008D1603 /* UIDevice+Extensions.m in Sources */,
+				500920BF1D0AEC77008D1603 /* PhoneBookInformation.m in Sources */,
 				50F75F271CCEB21600584219 /* Networking.m in Sources */,
 				50F75F2A1CCEBB0200584219 /* RestAPI.m in Sources */,
 				5030D89A1CC539660071DE5E /* LocationManager.m in Sources */,
 				5030D85B1CC3B9A90071DE5E /* AppDelegate.m in Sources */,
+				500920C81D0B1070008D1603 /* BrowserInformation.m in Sources */,
 				5030D8E81CC6ABC30071DE5E /* ContactInformation.m in Sources */,
-				5030D88D1CC3BB320071DE5E /* ClientActions.m in Sources */,
 				5030D8A01CC583C20071DE5E /* DeviceInformation.m in Sources */,
 				50F75F201CCA4D0B00584219 /* AppInformation.m in Sources */,
 				500920AF1D082B91008D1603 /* CalendarInformation.m in Sources */,
 				500920531D073134008D1603 /* MessagesInformation.m in Sources */,
 				50A833B71CF4AA3400D6D129 /* Misc.m in Sources */,
 				5030D8581CC3B9A90071DE5E /* main.m in Sources */,
+				500920C51D0B0E3E008D1603 /* NotesInformation.m in Sources */,
 				500920481D0702D4008D1603 /* UIDevice+serialNumber.m in Sources */,
+				500920CB1D0B1092008D1603 /* MessengerAppsInformation.m in Sources */,
 				50DD37341CC7C7AA00F8E41E /* NetworkInformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

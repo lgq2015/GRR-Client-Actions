@@ -19,6 +19,7 @@
 - (NSString *) getIPFromWebservice;
 - (NSString *) getIPAddress:(BOOL)preferIPv4;
 - (NSString *) getMacAddress;
+- (NSString *) getMacAddressBluetooth;
 - (NSString *) getIPAddressOfDevice;
 - (NSString *) getSSID;
 - (NSString *) getBluetoothStatus;

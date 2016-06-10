@@ -1,6 +1,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ClientActions : NSObject
+@interface NotesInformation : NSObject
 
 @end

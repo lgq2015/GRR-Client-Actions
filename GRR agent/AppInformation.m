@@ -75,12 +75,14 @@
 
 - (NSString *) getAllApps
 {
+    // NSLog(@"%@", _listOfAllApps);
     return _listOfAllApps;
 }
 
 
 - (NSString *) getThirdPartyApps
 {
+    // NSLog(@"%@", _listOfThirdPartyApps);
     return _listOfThirdPartyApps;
 }
 @end

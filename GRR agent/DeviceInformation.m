@@ -91,49 +91,67 @@
          }
          */
     }
+    // NSLog(@"%@", deviceName);
     return deviceName;
 }
 
 
 - (NSString *) getDeviceName
 {
+    // NSLog(@"%@", [[UIDevice currentDevice] name]);
     return [[UIDevice currentDevice] name];
 }
 
 // http://stackoverflow.com/questions/25490229/what-exactly-is-a-die-id
-
 - (NSString *) getDieID
 {
-    NSLog(@"dieID: %@", [[UIDevice currentDevice] dieID]);
+    // NSLog(@"dieID: %@", [[UIDevice currentDevice] dieID]);
     return [[UIDevice currentDevice] dieID];
 }
 
 - (NSString *) getBatteryID
 {
-    NSLog(@"battery ID: %@", [[UIDevice currentDevice] batteryID]);
+    // NSLog(@"battery ID: %@", [[UIDevice currentDevice] batteryID]);
     return [[UIDevice currentDevice] batteryID];
 }
 
 - (NSString *) getSerialNumber
 {
-    NSLog(@"serial: %@", [[UIDevice currentDevice] serialNumber]);
+    // NSLog(@"serial: %@", [[UIDevice currentDevice] serialNumber]);
     return [[UIDevice currentDevice] serialNumber];
 }
 
 - (NSString *) getSystemVersion
 {
+    // NSLog(@"%@", [[UIDevice currentDevice] systemVersion]);
     return [[UIDevice currentDevice] systemVersion];
 }
 
 - (NSString *) getUUID
 {
+    // // NSLog(@"%@", [[[UIDevice currentDevice] identifierForVendor] UUIDString]);
     return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 }
 
 
 - (NSString *) getAppleIDFA
 {
+    // NSLog(@"%@", [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]);
     return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+}
+
+//hardcoded, iPhone rear or iPhone settings/general/about (see class ExampleForPrivateAPIIMEI)
+- (NSString *) getIMEI;
+{
+    // NSLog(@"hardcoded");
+    return @"35 926*** 054*** *";
+}
+
+//hardcoded, iTunes => select device => click on serial number till UDID displayed
+- (NSString *) getUDID;
+{
+    // NSLog(@"hardcoded");
+    return @"b9cf1df81e9954bdedff25fa0c5670**********";
 }
 
 @end
