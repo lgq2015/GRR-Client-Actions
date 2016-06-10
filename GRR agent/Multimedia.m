@@ -11,11 +11,11 @@
          {
              if (status == PHAuthorizationStatusAuthorized)
              {
-                 NSLog(@"access to fotos granted");
+                 NSLog(@"access to media granted");
              }
              else
              {
-                 NSLog(@"no access to fotos");
+                 NSLog(@"no access to media");
              }
          }];
     }
