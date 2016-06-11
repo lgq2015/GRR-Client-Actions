@@ -58,15 +58,21 @@
     _getMisc = [[Misc alloc]init];
     
     _startNetworking = [[Networking alloc]init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doStuffOnAppEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
+-(void)doStuffOnAppEnterForeground
+{
+    // NSLog(@"got ip on app entered foreground");
+    // do stuff
+}
 
 -(void)viewDidLayoutSubviews
 {
     // height of app UI @ scrolling
     _ScrollView.contentSize = CGSizeMake(0, 2000);
 }
-
 
 - (void)didReceiveMemoryWarning
 {
