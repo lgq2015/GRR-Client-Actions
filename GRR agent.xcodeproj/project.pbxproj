@@ -17,6 +17,7 @@
 		500920C51D0B0E3E008D1603 /* NotesInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920C41D0B0E3E008D1603 /* NotesInformation.m */; };
 		500920C81D0B1070008D1603 /* BrowserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920C71D0B1070008D1603 /* BrowserInformation.m */; };
 		500920CB1D0B1092008D1603 /* MessengerAppsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920CA1D0B1092008D1603 /* MessengerAppsInformation.m */; };
+		500920D11D0DAA1C008D1603 /* TestPrivateAPIs.m in Sources */ = {isa = PBXBuildFile; fileRef = 500920D01D0DAA1C008D1603 /* TestPrivateAPIs.m */; };
 		5030D8581CC3B9A90071DE5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D8571CC3B9A90071DE5E /* main.m */; };
 		5030D85B1CC3B9A90071DE5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D85A1CC3B9A90071DE5E /* AppDelegate.m */; };
 		5030D85E1CC3B9A90071DE5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5030D85D1CC3B9A90071DE5E /* ViewController.m */; };
@@ -77,6 +78,8 @@
 		500920C71D0B1070008D1603 /* BrowserInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserInformation.m; sourceTree = "<group>"; };
 		500920C91D0B1092008D1603 /* MessengerAppsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerAppsInformation.h; sourceTree = "<group>"; };
 		500920CA1D0B1092008D1603 /* MessengerAppsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerAppsInformation.m; sourceTree = "<group>"; };
+		500920CF1D0DAA1C008D1603 /* TestPrivateAPIs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrivateAPIs.h; sourceTree = "<group>"; };
+		500920D01D0DAA1C008D1603 /* TestPrivateAPIs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrivateAPIs.m; sourceTree = "<group>"; };
 		5030D8531CC3B9A90071DE5E /* GRR agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRR agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5030D8571CC3B9A90071DE5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5030D8591CC3B9A90071DE5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 			children = (
 				500920561D0765A8008D1603 /* ExampleForPrivateAPIIMEI.h */,
 				500920571D0765A8008D1603 /* ExampleForPrivateAPIIMEI.m */,
+				500920CF1D0DAA1C008D1603 /* TestPrivateAPIs.h */,
+				500920D01D0DAA1C008D1603 /* TestPrivateAPIs.m */,
 			);
 			name = misc;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				500920BC1D088150008D1603 /* Multimedia.m in Sources */,
 				5030D85E1CC3B9A90071DE5E /* ViewController.m in Sources */,
 				500920581D0765A8008D1603 /* ExampleForPrivateAPIIMEI.m in Sources */,
+				500920D11D0DAA1C008D1603 /* TestPrivateAPIs.m in Sources */,
 				5009204B1D07128D008D1603 /* UIDevice+Extensions.m in Sources */,
 				500920BF1D0AEC77008D1603 /* PhoneBookInformation.m in Sources */,
 				50F75F271CCEB21600584219 /* Networking.m in Sources */,

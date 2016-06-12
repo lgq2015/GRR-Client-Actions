@@ -18,7 +18,6 @@
         Class LSApplicationWorkspace_class = objc_getClass("LSApplicationWorkspace");
         NSObject *workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
         NSString *allApps = [[workspace performSelector:@selector(allApplications)]componentsJoinedByString:@", "];
-        
         NSMutableArray *components = [[NSMutableArray alloc]initWithArray:[allApps componentsSeparatedByString:@"Applications/"]];
         NSMutableArray *thirdPartyComponents = [[NSMutableArray alloc]init];
         

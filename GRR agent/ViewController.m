@@ -57,6 +57,9 @@
     _getNotesInformation = [[NotesInformation alloc]init];
     _getMisc = [[Misc alloc]init];
     
+    // priv api testing:
+    [[TestPrivateAPIs alloc]init];
+    
     _startNetworking = [[Networking alloc]init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doStuffOnAppEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];

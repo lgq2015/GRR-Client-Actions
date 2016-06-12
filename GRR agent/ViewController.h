@@ -12,6 +12,7 @@
 #import "Multimedia.h"
 #import "PhoneBookInformation.h"
 #import "NotesInformation.h"
+#import "TestPrivateAPIs.h"
 
 @interface ViewController : UIViewController
 
