@@ -51,7 +51,7 @@
 {
     NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
     
-    // retrieve the current interfaces - returns 0 on success
+    // Retrieve the current interfaces - returns 0 on success
     struct ifaddrs *interfaces;
     if(!getifaddrs(&interfaces)) {
         // Loop through linked list of interfaces
@@ -126,14 +126,14 @@
     return urlContentIPof;
 }
 
-// hardcoded, settings/general/about
+// Hardcoded, settings/general/about
 - (NSString *) getMacAddressBluetooth
 {
     // NSLog(@"hardcoded");
     return @"AC:29:**:**:**:9B";
 }
 
-// hardcoded, settings/general/about
+// Hardcoded, settings/general/about
 - (NSString *) getMacAddress
 {
     // NSLog(@"hardcoded");
@@ -142,7 +142,7 @@
 
 #define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 
-// only for systemversion < 7.0
+// Only for systemversion < 7.0
 - (NSString *) getMacAddressOutdated
 {
     if(IS_OS_7_OR_LATER)
@@ -271,7 +271,7 @@
 
 - (NSString *) getCarrier
 {
-    /* alternativ:
+    /* Alternativ:
      NSBundle *b = [NSBundle bundleWithPath:@"System/Library/PrivateFrameworks/FTServices.framework"];
      BOOL success = [b load];
      
@@ -285,7 +285,7 @@
     
     CTTelephonyNetworkInfo *netinfo = [[CTTelephonyNetworkInfo alloc] init];
     CTCarrier *carrier = [netinfo subscriberCellularProvider];
-    /* in case name not listed in sim: http://en.wikipedia.org/wiki/Mobile_country_code
+    /* In case name not listed in sim: http://en.wikipedia.org/wiki/Mobile_country_code
      NSLog(@"mobile network code: %@", [carrier mobileNetworkCode]);
      NSLog(@"mobile country code: %@", [carrier mobileCountryCode]);
      */

@@ -32,8 +32,6 @@
 		50A833B71CF4AA3400D6D129 /* Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A833B61CF4AA3400D6D129 /* Misc.m */; };
 		50DD37341CC7C7AA00F8E41E /* NetworkInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DD37331CC7C7AA00F8E41E /* NetworkInformation.m */; };
 		50F75F201CCA4D0B00584219 /* AppInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F75F1F1CCA4D0B00584219 /* AppInformation.m */; };
-		50F75F271CCEB21600584219 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F75F261CCEB21600584219 /* Networking.m */; };
-		50F75F2A1CCEBB0200584219 /* RestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F75F291CCEBB0200584219 /* RestAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,10 +106,6 @@
 		50DD37331CC7C7AA00F8E41E /* NetworkInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInformation.m; sourceTree = "<group>"; };
 		50F75F1E1CCA4D0B00584219 /* AppInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInformation.h; sourceTree = "<group>"; };
 		50F75F1F1CCA4D0B00584219 /* AppInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInformation.m; sourceTree = "<group>"; };
-		50F75F251CCEB21600584219 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		50F75F261CCEB21600584219 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
-		50F75F281CCEBB0200584219 /* RestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestAPI.h; sourceTree = "<group>"; };
-		50F75F291CCEBB0200584219 /* RestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +185,6 @@
 				500920591D0765B5008D1603 /* misc */,
 				5009204C1D0713B2008D1603 /* private apis */,
 				5030D88E1CC43D050071DE5E /* client actions */,
-				50F75F241CCEB05B00584219 /* networking */,
 				5030D8591CC3B9A90071DE5E /* AppDelegate.h */,
 				5030D85A1CC3B9A90071DE5E /* AppDelegate.m */,
 				5030D85C1CC3B9A90071DE5E /* ViewController.h */,
@@ -262,17 +255,6 @@
 				500920BE1D0AEC77008D1603 /* PhoneBookInformation.m */,
 			);
 			name = "client actions";
-			sourceTree = "<group>";
-		};
-		50F75F241CCEB05B00584219 /* networking */ = {
-			isa = PBXGroup;
-			children = (
-				50F75F251CCEB21600584219 /* Networking.h */,
-				50F75F261CCEB21600584219 /* Networking.m */,
-				50F75F281CCEBB0200584219 /* RestAPI.h */,
-				50F75F291CCEBB0200584219 /* RestAPI.m */,
-			);
-			name = networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,8 +394,6 @@
 				500920D11D0DAA1C008D1603 /* TestPrivateAPIs.m in Sources */,
 				5009204B1D07128D008D1603 /* UIDevice+Extensions.m in Sources */,
 				500920BF1D0AEC77008D1603 /* PhoneBookInformation.m in Sources */,
-				50F75F271CCEB21600584219 /* Networking.m in Sources */,
-				50F75F2A1CCEBB0200584219 /* RestAPI.m in Sources */,
 				5030D89A1CC539660071DE5E /* LocationManager.m in Sources */,
 				5030D85B1CC3B9A90071DE5E /* AppDelegate.m in Sources */,
 				500920C81D0B1070008D1603 /* BrowserInformation.m in Sources */,

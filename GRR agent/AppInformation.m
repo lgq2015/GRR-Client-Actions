@@ -14,13 +14,14 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
+    if (self) { // Use private framework
         Class LSApplicationWorkspace_class = objc_getClass("LSApplicationWorkspace");
         NSObject *workspace = [LSApplicationWorkspace_class performSelector:@selector(defaultWorkspace)];
         NSString *allApps = [[workspace performSelector:@selector(allApplications)]componentsJoinedByString:@", "];
         NSMutableArray *components = [[NSMutableArray alloc]initWithArray:[allApps componentsSeparatedByString:@"Applications/"]];
         NSMutableArray *thirdPartyComponents = [[NSMutableArray alloc]init];
         
+        // Sort the app list
         int i;
         for(i=1;i<[components count];i++)
         {
@@ -47,6 +48,7 @@
         allApps = @"";
         NSString *thirdPartyApps = @"";
         
+        // Get all third party apps
         int k;
         for(k=1;k<[thirdPartyComponents count];k++)
         {

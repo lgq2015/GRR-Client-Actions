@@ -5,7 +5,7 @@
 
 - (NSString *) getBrowserHistory
 {
-    // requires filesystem access, jailbreak
+    // Requires filesystem access, jailbreak
     NSLog(@"not implemented");
     return @"not implemented";
 }

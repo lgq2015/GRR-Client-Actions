@@ -27,14 +27,14 @@
     EKEventStore *store = [[EKEventStore alloc] init];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    // start date
+    // Start date
     NSDateComponents *oneYearAgoComponents = [[NSDateComponents alloc] init];
     oneYearAgoComponents.year = -1;
     NSDate *oneYearAgo = [calendar dateByAddingComponents:oneYearAgoComponents
                                                    toDate:[NSDate date]
                                                   options:0];
     
-    // end date
+    // End date
     NSDateComponents *oneYearFromNowComponents = [[NSDateComponents alloc] init];
     oneYearFromNowComponents.year = 1;
     NSDate *oneYearFromNow = [calendar dateByAddingComponents:oneYearFromNowComponents

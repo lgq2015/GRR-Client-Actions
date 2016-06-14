@@ -6,7 +6,7 @@
 
 - (NSString *) getAllNotes
 {
-    // no api, needs file system access => jailbreak
+    // No api, needs file system access => jailbreak
     NSLog(@"not implemented");
     return @"not implemented";
 }

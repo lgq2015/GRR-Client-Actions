@@ -35,8 +35,6 @@
 @property (nonatomic, strong) NotesInformation *getNotesInformation;
 @property (nonatomic, strong) Misc *getMisc;
 
-@property (nonatomic, strong) Networking *startNetworking;
-
 @end
 
 @implementation ViewController
@@ -57,10 +55,11 @@
     _getNotesInformation = [[NotesInformation alloc]init];
     _getMisc = [[Misc alloc]init];
     
-    // priv api testing:
-    [[TestPrivateAPIs alloc]init];
+    // Testing audio files log
+    [_getMedia getAllAudioInformation];
     
-    _startNetworking = [[Networking alloc]init];
+    // Priv api testing with init
+    // [[TestPrivateAPIs alloc]init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doStuffOnAppEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
@@ -68,12 +67,12 @@
 -(void)doStuffOnAppEnterForeground
 {
     // NSLog(@"got ip on app entered foreground");
-    // do stuff
+    // Do stuff
 }
 
 -(void)viewDidLayoutSubviews
 {
-    // height of app UI @ scrolling
+    // Height of app UI @ scrolling
     _ScrollView.contentSize = CGSizeMake(0, 2000);
 }
 
@@ -97,12 +96,12 @@
     
     NSString *contactsInformation = @"";
     
-    // get all names
+    // Get all names
     NSString *contactNames = @"";
     contactNames = [_getContactInformation getContactNames];
     NSLog(@"contactNames: %@", contactNames);
     
-    // get all names with phonenumber
+    // Get all names with phonenumber
     
     NSString *contactNamesWithPhonenumber = @"";
     contactNamesWithPhonenumber = [_getContactInformation getContactNamesAndPhonenumber];
@@ -126,53 +125,53 @@
     
     NSString *deviceInformation = @"";
     
-    // time
+    // Time
     [_getMisc getCurrentTime];
     
-    // get device model
+    // Get device model
     NSString *deviceModel = @"";
     deviceModel = [_getDeviceInformation getDeviceModel];
     deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"device: %@\n", deviceModel]];
     NSLog(@"device: %@", deviceModel);
     
-    // name identifying the device
+    // Name identifying the device
     NSString *deviceName = [_getDeviceInformation getDeviceName];
     deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"name: %@\n", deviceName]];
     NSLog(@"name: %@", deviceName);
     
-    // current version of the operating system
+    // Current version of the operating system
     NSString *systemVersion = [_getDeviceInformation getSystemVersion];
     deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"systemversion: %@\n", systemVersion]];
     NSLog(@"systemVersion: %@", systemVersion);
     
-    // get gps informations
+    // Get gps informations
     NSString *isGPSActivated = [_getLocationInformation getGPSInformation];
     deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"GPS activated %@\n", isGPSActivated]];
     NSLog(@"GPS activated: %@", isGPSActivated);
     
-    // only get if location service enabled
+    // Only get if location service enabled
     if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedWhenInUse || [CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedAlways)
     {
-        // get gps coordinates
+        // Get gps coordinates
         NSString *gpsCoordinates = @"";
         gpsCoordinates = [_getLocationInformation getGPSCoordinates];
         deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"GPS coordinates: %@\n", gpsCoordinates]];
         NSLog(@"GPS coordinates: %@", gpsCoordinates);
         
         /*
-        // get full location
+        // Get full location
         NSString *fullLocation = [_getLocationInformation getFullLocation];
         deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"%@\n", fullLocation]];
         NSLog(@"full location: %@", fullLocation);
         */
     }
     
-    // get apple identifier for advertisers (IDFA)
+    // Get apple identifier for advertisers (IDFA)
     NSString *appleIDFA = [_getDeviceInformation getAppleIDFA];
     deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"Apple IDFA: %@\n", appleIDFA]];
     NSLog(@"Apple IDFA: %@", appleIDFA);
     
-    // get UDID
+    // Get UDID
     NSString *UDID = [_getDeviceInformation getUUID];
     deviceInformation = [deviceInformation stringByAppendingString:[NSString stringWithFormat: @"Apple UUID: %@\n", UDID]];
     NSLog(@"Apple UUID: %@", UDID);
@@ -187,35 +186,35 @@
 {
     NSString *networkInformation = @"";
     
-    // log all ip addresses
+    // Log all ip addresses
     [_getNetworkInformation getIPAddress:YES];
     
-    // get ip of gateway from webservice
+    // Get ip of gateway from webservice
     NSString *ipAddressGateway = [_getNetworkInformation getIPFromWebservice];
     networkInformation = [networkInformation stringByAppendingString:[NSString stringWithFormat: @"ip address gateway: %@\n", ipAddressGateway]];
     NSLog(@"ip address gateway: %@", ipAddressGateway);
     
-    // get mac address
+    // Get mac address, hardcoded
     NSString *macAddress = [_getNetworkInformation getMacAddress];
     networkInformation = [networkInformation stringByAppendingString:[NSString stringWithFormat: @"mac address: %@\n", macAddress]];
     NSLog(@"mac address: %@", macAddress);
     
-    // get ip address of device
+    // Get ip address of device
     NSString *ipAddressDevice = [_getNetworkInformation getIPAddressOfDevice];
     networkInformation = [networkInformation stringByAppendingString:[NSString stringWithFormat: @"ip address device: %@\n", ipAddressDevice]];
     NSLog(@"ip address device: %@", ipAddressDevice);
     
-    // get SSID
+    // Get SSID
     NSString *SSID = [_getNetworkInformation getSSID];
     networkInformation = [networkInformation stringByAppendingString:[NSString stringWithFormat: @"SSID: %@\n", SSID]];
     NSLog(@"SSID: %@", SSID);
     
-    // get carrier name
+    // Get carrier name
     NSString *carrierName = [_getNetworkInformation getCarrier];
     networkInformation = [networkInformation stringByAppendingString:[NSString stringWithFormat: @"carrier name: %@\n", carrierName]];
     NSLog(@"carrier name: %@", carrierName);
 
-    // get bluetooth status
+    // Get bluetooth status
     NSString *bluetoothStatus = [_getNetworkInformation getBluetoothStatus];
     networkInformation = [networkInformation stringByAppendingString:[NSString stringWithFormat: @"bluetoothstatus: %@\n", bluetoothStatus]];
     NSLog(@"bluetoothstatus: %@", bluetoothStatus);
@@ -229,7 +228,7 @@
 {
     NSString *appInformation = @"";
     
-    // get list of apps
+    // Get list of apps
     NSString *listOfApps = [_getAppInformation getAllApps];
     appInformation = [appInformation stringByAppendingString:[NSString stringWithFormat: @"all apps: %@\n", listOfApps]];
     NSLog(@"all apps: %@\n", listOfApps);
@@ -243,7 +242,7 @@
 {
      NSString *appInformation = @"";
     
-    //get list of third party apps
+    // Get list of third party apps
     NSString *listOfThirdPartyApps = [_getAppInformation getThirdPartyApps];
     appInformation = [appInformation stringByAppendingString:[NSString stringWithFormat: @"third party apps: %@\n", listOfThirdPartyApps]];
     NSLog(@"third party apps: %@\n", listOfThirdPartyApps);
@@ -267,7 +266,7 @@
     
     NSString *calendarInformation = @"";
     
-    //get array of all events
+    // Get array of all events
     NSString *getEvents = [_getCalendarInformation getCalendar];
     calendarInformation = [calendarInformation stringByAppendingString:[NSString stringWithFormat: @"all events: %@\n", getEvents]];
     
@@ -287,6 +286,7 @@
         return;
     }
     
+    // Assets of media
     [_getMedia getAllAudio];
     [_getMedia getAllVideos];
     [_getMedia getAllImages];

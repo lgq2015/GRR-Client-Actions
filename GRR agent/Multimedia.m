@@ -53,10 +53,10 @@
     {
         return nil;
     }
-    //get random asset for testing
+    // Get random asset for testing
     PHAsset *randomImageAsset = [fetchResult objectAtIndex:arc4random_uniform(numberOfImages)];
 
-    // get photo info from this asset
+    // Get photo info from this asset
     NSLog(@"filename: %@",[randomImageAsset valueForKey:@"filename"]);
     NSLog(@"creation date: %@",[randomImageAsset valueForKey:@"creationDate"]);
     
@@ -75,7 +75,7 @@
              NSURL *path = [info objectForKey:@"PHImageFileURLKey"];
              NSLog(@"filepath: %@", path);
          }
-         // more info
+         // More info
          // NSLog(@"fileinfo: %@", info);
      }];
     
@@ -125,7 +125,7 @@
     return assetArray;
 }
 
-// within PHAssetLibrary
+// Within PHAssetLibrary
 - (NSArray *) getAllAudio
 {
     PHFetchOptions *fetchOptions = [PHFetchOptions new];
@@ -150,7 +150,7 @@
 - (NSString *) getAllAudioInformation
 {
     NSMutableString *audioInfo = [[NSMutableString alloc] initWithString:@"Albums:"];
-    [audioInfo appendFormat:@"\n count: %i",[[[MPMediaQuery albumsQuery] collections] count]];
+    [audioInfo appendFormat:@"\ncount: %i",[[[MPMediaQuery albumsQuery] collections] count]];
     for (MPMediaItemCollection *collection in [[MPMediaQuery albumsQuery] collections]) {
         [audioInfo appendFormat:@"\n%@",[[collection representativeItem] valueForProperty:MPMediaItemPropertyAlbumTitle]];
     }
